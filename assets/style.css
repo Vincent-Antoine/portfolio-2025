@@ -1,0 +1,47 @@
+:root {
+  --white: #fafaf8;
+  --black: #1a1a1a;
+}
+.vc_text-black {
+  color: var(--black);
+}
+.vc_text-white {
+  color: var(--white);
+}
+
+body {
+  background-color: var(--white);
+  color: var(--black);
+}
+ /* Chevron au hover uniquement */
+    .nav-link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link::before {
+      content: '›';
+      position: absolute;
+      left: -0.5rem;
+      opacity: 0;
+      transform: translateX(-5px);
+      transition: all 0.3s ease;
+      color: var(--black);
+    }
+
+    .nav-link:hover::before {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .vc_principal-texte {
+      font-size: 8rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 2rem 0;
+      text-align: center;
+      color: var(--black);
+    }
