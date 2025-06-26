@@ -2,6 +2,13 @@
   --white: #fafaf8;
   --black: #1a1a1a;
 }
+
+.text-white {
+  color: var(--white) !important;
+}
+.text-black {
+  color: var(--black) !important;
+}
 .vc_text-black {
   color: var(--black);
 }
@@ -14,7 +21,8 @@ body {
   color: var(--black);
 }
  /* Chevron au hover uniquement */
-    .nav-link {
+    .nav-link,
+    .btn-site {
       position: relative;
       display: inline-flex;
       align-items: center;
@@ -22,7 +30,8 @@ body {
       text-decoration: none;
     }
 
-    .nav-link::before {
+    .nav-link::before,
+    .btn-site::before {
       content: '›';
       position: absolute;
       left: -0.5rem;
@@ -32,7 +41,13 @@ body {
       color: var(--black);
     }
 
-    .nav-link:hover::before {
+    .nav-footer .nav-link::before {
+            color: var(--white);
+
+    }
+
+    .nav-link:hover::before,
+    .btn-site:hover::before {
       opacity: 1;
       transform: translateX(0);
     }
@@ -45,3 +60,57 @@ body {
       text-align: center;
       color: var(--black);
     }
+
+
+.avis-clients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 250px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.logo-client {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+
+.nom-client {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.avis {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.stars {
+  color: gold;
+  font-size: 18px;
+}
+
+
+/*Contact Form */
+input#email::placeholder,
+textarea#message::placeholder {
+  color: var(--white);
+  text-align: end;
+  text-transform: uppercase;
+}
