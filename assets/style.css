@@ -114,3 +114,32 @@ textarea#message::placeholder {
   text-align: end;
   text-transform: uppercase;
 }
+
+
+/* 1. On cache le curseur natif dès que l'on survole une image */
+#vc_carousel-scroll img:hover {
+  cursor: none;
+}
+
+/* 2. Le rond noir centré sur la souris */
+.custom-cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 80px; height: 80px;
+  margin: -40px 0 0 -40px;       /* pour centrer le cercle sur la souris */
+  border-radius: 50%;
+  background: black;
+  color: white;
+  font: 10px/1 sans-serif;
+  display: none;                /* caché par défaut */
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;         /* pour que le div ne bloque pas les clics */
+  z-index: 9999;
+  user-select: none;
+}
+
+/* 3. On n’affiche le curseur personnalisé que quand le natif est caché */
+body.cursor-hidden .custom-cursor {
+  display: flex;
+}

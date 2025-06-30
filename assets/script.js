@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
       end: () => "+=" + totalScroll,
       scrub: 1,
       anticipatePin: 1,
+
     }
   });
 
@@ -154,3 +155,18 @@ gsap.utils.toArray(".vc_section").forEach(section => {
 });
 
 
+
+
+// 4 lignes de JS pour afficher/masquer et suivre la souris
+const body = document.body;
+const cursor = document.querySelector('.custom-cursor');
+
+document.querySelectorAll('#vc_carousel-scroll img').forEach(img => {
+  img.addEventListener('mouseenter', () => body.classList.add('cursor-hidden'));
+  img.addEventListener('mouseleave', () => body.classList.remove('cursor-hidden'));
+});
+
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
