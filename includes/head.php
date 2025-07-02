@@ -2,6 +2,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Portfolio Vincent Comparato - Developpeur web</title>
+  <link rel="icon" href="/assets/VAC_noir.webp" />
   <meta
     content="Portfolio de Vincent-Antoine Comparato, développeur web basé à Bordeaux. Expert en sites WordPress et applications sur-mesure, axés performance et SEO."
     name="description" />
