@@ -114,7 +114,7 @@
             </a>
           </h3>
           <p class="text-sm text-black opacity-60">
-            2023 – 2024 · MyDigitalSchool Bordeaux · Bac +3
+            2023 – 2024 · MyDigitalSchool Bordeaux · Bac +3</br><a href="https://www.mydigitalschool.com/actualite-bordeaux/top-code-un-defi-releve"> Vainqueur du challenge TopCode 2024 (National)</a>
           </p>
         </div>
         <div class="p-2">
