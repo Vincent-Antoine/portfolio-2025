@@ -1,7 +1,7 @@
 <section class="px-4 sm:px-8 py-12 vc_section" id="contact">
       <section class="bg-black text-white rounded-[50px]">
         <div
-          class="flex flex-col px-8 py-12 md:flex-row justify-between gap-10"
+          class="flex flex-col px-8 py-12 md:flex-row justify-between"
         >
           <!-- Formulaire -->
           <div class="flex-1">
@@ -62,29 +62,6 @@
               <a class="nav-link" href="#temoignages">Témoignages</a>
             </nav>
             <!-- Réseaux sociaux -->
-            <div class="flex gap-4 mt-10">
-              <a
-                aria-label="Instagram"
-                class="hover:opacity-80"
-                href="https://www.instagram.com/vincent.cm/"
-              >
-                <i class="fab fa-instagram text-xl"></i>
-              </a>
-              <a
-                aria-label="GitHub"
-                class="hover:opacity-80"
-                href="https://github.com/Vincent-Antoine"
-              >
-                <i class="fab fa-github text-xl"></i>
-              </a>
-              <a
-                aria-label="LinkedIn"
-                class="hover:opacity-80"
-                href="https://www.linkedin.com/in/vincent-comparato/"
-              >
-                <i class="fab fa-linkedin text-xl"></i>
-              </a>
-            </div>
           </div>
         </div>
         <div
