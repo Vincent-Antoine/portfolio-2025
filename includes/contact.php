@@ -1,4 +1,4 @@
-<section class="px-8 py-12 vc_section" id="contact">
+<section class="px-4 sm:px-8 py-12 vc_section" id="contact">
       <section class="bg-black text-white rounded-[50px]">
         <div
           class="flex flex-col px-8 py-12 md:flex-row justify-between gap-10"
