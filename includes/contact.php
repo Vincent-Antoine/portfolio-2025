@@ -7,6 +7,8 @@
           <div class="flex-1">
 <h2 class="text-2xl md:text-8xl font-bold mb-8">ME CONTACTER</h2>
             <form
+              id="contact-form"
+
               class="space-y-6 max-w-xl my-12"
               action="send-mail.php"
               method="POST"
@@ -38,6 +40,8 @@
                 Envoyer
               </button>
             </form>
+            <div id="form-message" class="text-sm mt-4"></div>
+
           </div>
           <!-- Navigation droite -->
         <div class="flex flex-row md:flex-col items-end justify-between text-right flex-wrap">

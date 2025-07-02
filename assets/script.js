@@ -150,3 +150,38 @@ gsap.from(split.chars, {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+    const messageContainer = document.getElementById("form-message");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault(); // Empêche l'envoi classique
+
+      // Réinitialise le message
+      messageContainer.textContent = "";
+      messageContainer.className = "text-sm mt-4";
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+        });
+
+        const text = await response.text();
+
+        if (response.ok) {
+          messageContainer.textContent = text;
+          messageContainer.classList.add("text-green-500");
+          form.reset();
+        } else {
+          messageContainer.textContent = text;
+          messageContainer.classList.add("text-red-500");
+        }
+      } catch (error) {
+        messageContainer.textContent = "Erreur réseau. Veuillez réessayer.";
+        messageContainer.classList.add("text-red-500");
+      }
+    });
+  });
