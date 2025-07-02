@@ -3,7 +3,7 @@
 <head>
   <?php include 'includes/head.php'; ?>
 </head>
-<body class="vc_text-black">
+<body class="vc_text-black custom-cursor-body">
   <?php include 'includes/header.php'; ?>
   <?php include 'includes/about.php'; ?>
   <?php include 'includes/realisations.php'; ?>

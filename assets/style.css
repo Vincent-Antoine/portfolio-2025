@@ -5,6 +5,19 @@
   --black: #1a1a1a;
 }
 
+body {
+   cursor: url(https://cdn.prod.website-files.com/682310547ba9eeb97324a89e/682510013bf56c1de91cc6b6_cursor-default%402x.svg) 2 0, auto;
+}
+
+body a,
+body button{
+   cursor: url(https://cdn.prod.website-files.com/682310547ba9eeb97324a89e/682510005ac62e3f220e8f48_cursor-pointer%402x.svg) 2 0, auto;
+}
+
+body input,
+body textarea{
+   cursor: url(https://cdn.prod.website-files.com/682310547ba9eeb97324a89e/68251000735e1ffa3cdf5fdd_cursor-text%402x.svg) 2 0, auto !important;
+}
 .text-white {
   color: var(--white) !important;
 }

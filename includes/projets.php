@@ -5,7 +5,7 @@
   <div class="w-12 h-[2px] bg-black mb-10"></div>
   <div class="flex flex-wrap justify-between gap-4">
     <!-- Projet -->
-    <div class="group w-[170px] text-center cursor-pointer transition-all duration-300 ease-in-out ">
+    <div class="group w-[170px] text-center  transition-all duration-300 ease-in-out ">
       <h3 class="vc_text-black text-sm font-medium mb-1 underline vc_title-project">
         Mega Compressor
       </h3>
@@ -22,7 +22,7 @@
     </div>
 
     <!-- TableGenerator -->
-    <div class="group w-[170px] text-center cursor-pointer transition-all duration-300 ease-in-out">
+    <div class="group w-[170px] text-center  transition-all duration-300 ease-in-out">
       <h3 class="vc_text-black text-sm font-medium mb-1 underline vc_title-project">
         TableGenerator
       </h3>
@@ -39,7 +39,7 @@
     </div>
 
     <!-- Plugin FAQ -->
-    <div class="group w-[170px] text-center cursor-pointer transition-all duration-300 ease-in-out">
+    <div class="group w-[170px] text-center  transition-all duration-300 ease-in-out">
       <h3 class="vc_text-black text-sm font-medium mb-1 underline vc_title-project">
         Plugin FAQ
       </h3>
@@ -56,7 +56,7 @@
     </div>
 
     <!-- Squad Generator -->
-    <div class="group w-[170px] text-center cursor-pointer transition-all duration-300 ease-in-out">
+    <div class="group w-[170px] text-center  transition-all duration-300 ease-in-out">
       <h3 class="vc_text-black text-sm font-medium mb-1 underline vc_title-project">
         Squad Generator
       </h3>
@@ -73,7 +73,7 @@
     </div>
 
     <!-- IA Auto Fiche -->
-    <div class="group w-[170px] text-center cursor-pointer transition-all duration-300 ease-in-out">
+    <div class="group w-[170px] text-center  transition-all duration-300 ease-in-out">
       <h3 class="vc_text-black text-sm font-medium mb-1 underline vc_title-project">
         Fiche IA (OpenAI)
       </h3>
