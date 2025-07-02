@@ -1,3 +1,5 @@
+
+
 :root {
   --white: #fafaf8;
   --black: #1a1a1a;
@@ -142,4 +144,8 @@ textarea#message::placeholder {
 /* 3. On n’affiche le curseur personnalisé que quand le natif est caché */
 body.cursor-hidden .custom-cursor {
   display: flex;
+}
+
+.logo-experience {
+  max-width: 250px;
 }

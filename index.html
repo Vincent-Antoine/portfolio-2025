@@ -1,391 +1,631 @@
 <!DOCTYPE html>
+
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Portfolio Vincent Comparato - Developpeur web</title>
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-  <!-- Lenis Smooth Scroll -->
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
-
-  <!-- Styles personnalisés -->
-  <link rel="stylesheet" href="/assets/style.css" />
-
-  <!-- Script custom (déféré pour DOMContentLoaded) -->
-  <script defer src="/assets/script.js"></script>
-
-
-</head>
-
-
-
-
-
-<body class="vc_text-black">
-
-  <header class="w-full border-b" id="vc_header">
-    <div class="mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16 items-center">
-
-        <!-- Logo / Nom -->
-        <div class="flex-shrink-0 text-sm leading-tight">
-          <span class="block font-semibold">VINCENT-ANTOINE </br>COMPARATO </span>
+    <meta
+      content="Portfolio de Vincent-Antoine Comparato, développeur web basé à Bordeaux. Expert en sites WordPress et applications sur-mesure, axés performance et SEO."
+      name="description"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link
+      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      referrerpolicy="no-referrer"
+      rel="stylesheet"
+    />
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+    <!-- Styles personnalisés -->
+    <link href="/assets/style.css" rel="stylesheet" />
+    <!-- Script custom (déféré pour DOMContentLoaded) -->
+    <script defer="" src="/assets/script.js"></script>
+  </head>
+  <body class="vc_text-black">
+    <header class="w-full border-b" id="vc_header">
+      <div class="mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <!-- Logo / Nom -->
+          <div class="flex-shrink-0 text-sm leading-tight">
+            <span class="block font-semibold">VINCENT-ANTOINE COMPARATO </span>
+          </div>
+          <!-- Menu desktop -->
+          <nav class="hidden md:flex space-x-6 text-sm">
+            <a class="nav-link" href="#a-propos">À PROPOS</a>
+            <a class="nav-link" href="#realisations">MES RÉALISATIONS</a>
+            <a class="nav-link" href="#experiences">EXPÉRIENCES</a>
+            <a class="nav-link" href="#temoignage">TÉMOIGNAGE</a>
+          </nav>
+          <!-- Contact -->
+          <div class="hidden md:block text-sm">
+            <a class="nav-link" href="#contact">CONTACT</a>
+          </div>
+          <!-- Menu burger -->
+          <div class="md:hidden">
+            <button class="focus:outline-none" id="menu-toggle">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  d="M4 6h16M4 12h16M4 18h16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
-
-        <!-- Menu desktop -->
-        <nav class="hidden md:flex space-x-6 text-sm">
-          <a href="#a-propos" class="nav-link">À PROPOS</a>
-          <a href="#realisations" class="nav-link">MES RÉALISATIONS</a>
-          <a href="#experiences" class="nav-link">EXPÉRIENCES</a>
-          <a href="#temoignage" class="nav-link">TÉMOIGNAGE</a>
-        </nav>
-
-        <!-- Contact -->
-        <div class="hidden md:block text-sm">
-          <a href="#contact" class="nav-link">CONTACT</a>
+      </div>
+      <!-- Menu mobile -->
+      <div
+        class="md:hidden hidden px-4 pb-4 space-y-2 text-sm"
+        id="mobile-menu"
+      >
+        <a class="block nav-link" href="#a-propos">À PROPOS</a>
+        <a class="block nav-link" href="#realisations">MES RÉALISATIONS</a>
+        <a class="block nav-link" href="#experiences">EXPÉRIENCES</a>
+        <a class="block nav-link" href="#temoignage">TÉMOIGNAGE</a>
+        <a class="block nav-link" href="#contact">CONTACT</a>
+      </div>
+    </header>
+    <h1 class="vc_principal-texte uppercase">Developpeur web</h1>
+    <div class="flex flex-wrap md:flex-nowrap w-full px-8 py-12 vc_section">
+      <!-- Colonne de gauche -->
+      <div class="w-full md:w-1/2 mb-8 md:mb-0">
+        <h2
+          class="text-lg font-semibold vc_text-black uppercase tracking-wide mb-2"
+        >
+          À PROPOS
+        </h2>
+        <div class="w-12 h-[2px] bg-black"></div>
+      </div>
+      <!-- Colonne de droite -->
+      <div
+        class="w-full md:w-1/2 text-sm leading-relaxed vc_text-black space-y-4"
+      >
+        <p>
+          Je suis Vincent-Antoine Comparato, développeur web basé à Bordeaux en
+          France. Spécialisé dans la création de sites WordPress sur mesure et
+          d'applications sur-mesure, je m'adapte aux spécificités de chaque
+          projet pour répondre au mieux à vos besoins.
+        </p>
+        <p>
+          Grâce à ma formation de développeur, je maîtrise également plusieurs
+          langages de programmation ce qui me permet d’aller au-delà des limites
+          des solutions habituelles pour adapter le projet à vos usages.
+        </p>
+        <p>
+          Mon objectif : vous concevoir un site sur-mesure à la fois efficace et
+          esthétique, qui reflète votre identité, vous apporte une véritable
+          expérience et vous démarque clairement de vos concurrents.
+        </p>
+      </div>
+    </div>
+    <div
+      class="flex flex-wrap md:flex-nowrap w-full px-8 py-12 items-start border-b vc_section"
+    >
+      <!-- Colonne gauche -->
+      <div class="w-full md:w-1/2 mb-6 md:mb-0">
+        <h2
+          class="text-lg font-semibold uppercase vc_text-black tracking-wide mb-2"
+        >
+          RÉSEAUX SOCIAUX :
+        </h2>
+        <div class="w-12 h-[2px] bg-black"></div>
+      </div>
+      <!-- Colonne droite -->
+      <div class="w-full md:w-1/2 flex gap-6 text-sm font-medium vc_text-black">
+        <a class="underline" href="https://instagram.com" target="_blank"
+          >Instagram</a
+        >
+        <a class="underline" href="https://github.com" target="_blank"
+          >GitHub</a
+        >
+        <a class="underline" href="https://linkedin.com" target="_blank"
+          >LinkedIn</a
+        >
+      </div>
+    </div>
+    <div class="vc_section">
+      <!-- Titre fixe au scroll -->
+      <section class="px-8 py-12 vc_section-realisations">
+        <h2
+          class="text-lg font-semibold uppercase vc_text-black tracking-wide mb-2"
+        >
+          QUELQUES EXEMPLES DE RÉALISATIONS :
+        </h2>
+        <div class="w-12 h-[2px] bg-black"></div>
+      </section>
+      <!-- Section dédiée uniquement au scroll horizontal -->
+      <section class="relative overflow-hidden" id="vc_carousel-scroll">
+        <div class="flex gap-6 h-full w-max" id="carousel">
+          <!-- Arts Déco Design -->
+          <a
+            href="https://artsdecodesign.fr"
+            name="arts-deco-design"
+            rel="noopener"
+            target="_blank"
+          >
+            <img
+              alt="Arts Déco Design"
+              class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded"
+              loading="lazy"
+              src="/assets/mockup/artsdecodesign.webp"
+            />
+          </a>
+          <!-- Structure Gonflable 33 -->
+          <a
+            href="https://structure-gonflable-33.fr/"
+            name="structure-gonflable-33"
+            rel="noopener"
+            target="_blank"
+          >
+            <img
+              alt="Structure Gonflable 33"
+              class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded"
+              loading="lazy"
+              src="/assets/mockup/Structure-Gonflable-33.webp"
+            />
+          </a>
+          <!-- Maison Haurut -->
+          <a
+            href="https://maisonhaurut.fr/"
+            name="maison-haurut"
+            rel="noopener"
+            target="_blank"
+          >
+            <img
+              alt="Maison Haurut"
+              class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded"
+              loading="lazy"
+              src="/assets/mockup/Maison-Haurut.webp"
+            />
+          </a>
+          <!-- Les Noces d'Anaïs -->
+          <a
+            href="https://lesnocesdanais.fr"
+            name="les-noces-danais"
+            rel="noopener"
+            target="_blank"
+          >
+            <img
+              alt="Les Noces d'Anaïs"
+              class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded"
+              loading="lazy"
+              src="/assets/mockup/les-noces-anais.webp"
+            />
+          </a>
+          <!-- Pas de lien pour ces deux-là, si besoin vous pouvez en ajouter de la même manière -->
+          <img
+            alt="La Petite Capitale"
+            class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded"
+            loading="lazy"
+            src="/assets/mockup/la-petite-capitale.webp"
+          />
+          <a
+            href="https://bordeauxsportsactu.fr"
+            name="bordeaux-sports-actu"
+            rel="noopener"
+            target="_blank"
+          >
+            <img
+              alt="Bordeaux Sports Actu"
+              class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded"
+              loading="lazy"
+              src="/assets/mockup/bordeauxsportsactu.webp"
+            />
+          </a>
         </div>
+      </section>
+    </div>
 
-        <!-- Menu burger -->
-        <div class="md:hidden">
-          <button id="menu-toggle" class="focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+    <div class="custom-cursor uppercase">voir le site</div>
+
+    <section class="px-8 py-12 border-b vc_section">
+      <!-- Titre -->
+      <h2
+        class="text-lg font-semibold uppercase vc_text-black tracking-wide mb-2"
+      >
+        EXPÉRIENCES :
+      </h2>
+      <div class="w-12 h-[2px] bg-black mb-10"></div>
+      <!-- Deux colonnes -->
+      <div class="flex flex-wrap md:flex-nowrap w-full gap-12">
+        <!-- Colonne gauche (logos + infos) -->
+        <div class="w-full md:w-1/2 space-y-16">
+          <!-- Expérience TargetWeb -->
+          <div class="space-y-2">
+            <img
+              alt="Logo TargetWeb"
+              class="logo-experience h-[60px] object-contain"
+              loading="lazy"
+              src="/assets/logos/targetweb.webp"
+            />
+            <p class="vc_text-black text-sm">
+              Développeur full-stack – 2023 - Maintenant<br />Alternance – Ynov
+              Campus
+            </p>
+          </div>
+          <!-- Expérience Cybertek -->
+          <div class="space-y-2">
+            <img
+              alt="Logo Cybertek"
+              class="h-[60px] object-contain logo-experience"
+              loading="lazy"
+              src="/assets/logos/cybertek.webp"
+            />
+            <p class="vc_text-black text-sm">
+              Webmaster – 2022 - 2023<br />Alternance – IUT Bordeaux Bastide
+            </p>
+          </div>
+        </div>
+        <!-- Colonne droite (missions) -->
+        <div class="w-full md:w-1/2 text-sm vc_text-black space-y-8">
+          <ul class="list-inside space-y-1">
+            <li>WordPress</li>
+            <li>Site Ecommerce / Vitrine</li>
+            <li>WooCommerce</li>
+            <li>Divi / Elementor</li>
+            <li>Thème personnalisé</li>
+            <li>Création de plugin sur demande (Plugin de FAQ dynamique…)</li>
+            <li>Utilisation de PHP, SQL, HTML, CSS, JS, jQuery, Tailwind…</li>
+            <li>Déploiement de projet</li>
+            <li>Infogérance / Maintenance (parc de +150 sites)</li>
+            <li>SEO technique</li>
+            <li>Gestion sécurité</li>
+          </ul>
+          <ul class="list-inside space-y-1">
+            <li>
+              Création d’outil de rédaction automatique de fiche produit via IA
+            </li>
+            <li>Gestion de commandes E-commerce</li>
+            <li>Vérification faisabilité commandes e-commerce</li>
+            <li>Création d’outil pour la gestion SEO en python</li>
+            <li>Refonte mise en page fiche technique “pc gaming”</li>
+            <li>Gestion catalogue produit</li>
+            <li>Veille concurrentielle</li>
+            <li>Réflexion technique e-commerce</li>
+          </ul>
         </div>
       </div>
-    </div>
-
-    <!-- Menu mobile -->
-    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 text-sm">
-      <a href="#a-propos" class="block nav-link">À PROPOS</a>
-      <a href="#realisations" class="block nav-link">MES RÉALISATIONS</a>
-      <a href="#experiences" class="block nav-link">EXPÉRIENCES</a>
-      <a href="#temoignage" class="block nav-link">TÉMOIGNAGE</a>
-      <a href="#contact" class="block nav-link">CONTACT</a>
-    </div>
-  </header>
-
-  <h1 class="vc_principal-texte uppercase">Developpeur web</h1>
-
-  <div class="flex flex-wrap md:flex-nowrap w-full px-8 py-12 vc_section">
-  <!-- Colonne de gauche -->
-  <div class="w-full md:w-1/2 mb-8 md:mb-0">
-    <h2 class="text-lg font-semibold vc_text-black uppercase tracking-wide mb-2">À PROPOS</h2>
-    <div class="w-12 h-[2px] bg-black"></div>
-  </div>
-
-  <!-- Colonne de droite -->
-  <div class="w-full md:w-1/2 text-sm leading-relaxed vc_text-black space-y-4">
-    <p>
-      Je suis Vincent-Antoine Comparato, développeur web basé à Bordeaux en France.
-      Spécialisé dans la création de sites WordPress sur mesure et d'applications sur-mesure,
-      je m'adapte aux spécificités de chaque projet pour répondre au mieux à vos besoins.
-    </p>
-    <p>
-      Grâce à ma formation de développeur, je maîtrise également plusieurs langages de programmation
-      ce qui me permet d’aller au-delà des limites des solutions habituelles pour adapter le projet à vos usages.
-    </p>
-    <p>
-      Mon objectif : vous concevoir un site sur-mesure à la fois efficace et esthétique,
-      qui reflète votre identité, vous apporte une véritable expérience et vous démarque clairement de vos concurrents.
-    </p>
-  </div>
-</div>
-
-<div class="flex flex-wrap md:flex-nowrap w-full px-8 py-12 items-start border-b vc_section">
-  <!-- Colonne gauche -->
-  <div class="w-full md:w-1/2 mb-6 md:mb-0">
-    <h2 class="text-lg font-semibold uppercase vc_text-black tracking-wide mb-2">RÉSEAUX SOCIAUX :</h2>
-    <div class="w-12 h-[2px] bg-black"></div>
-  </div>
-
-  <!-- Colonne droite -->
-  <div class="w-full md:w-1/2 flex gap-6 text-sm font-medium vc_text-black">
-    <a href="https://instagram.com" target="_blank" class="underline">Instagram</a>
-    <a href="https://github.com" target="_blank" class="underline">GitHub</a>
-    <a href="https://linkedin.com" target="_blank" class="underline">LinkedIn</a>
-  </div>
-</div>
-<div class="vc_section ">
-<!-- Titre fixe au scroll -->
-  <section class="px-8 py-12 vc_section-realisations">
-    <h2 class="text-lg font-semibold uppercase vc_text-black tracking-wide mb-2">
-      QUELQUES EXEMPLES DE RÉALISATIONS :
-    </h2>
-    <div class="w-12 h-[2px] bg-black"></div>
-  </section>
-
-  <!-- Section dédiée uniquement au scroll horizontal -->
-  <section id="vc_carousel-scroll" class="relative overflow-hidden">
-<div id="carousel" class="flex gap-6 h-full w-max">
-  <!-- Arts Déco Design -->
-  <a href="https://artsdecodesign.fr" target="_blank" rel="noopener">
-    <img src="/assets/mockup/artsdecodesign.png"
-         class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded" />
-  </a>
-
-  <!-- Structure Gonflable 33 -->
-  <a href="https://structure-gonflable-33.fr/" target="_blank" rel="noopener">
-    <img src="/assets/mockup/Structure-Gonflable-33.png"
-         class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded" />
-  </a>
-
-  <!-- Maison Haurut -->
-  <a href="https://maisonhaurut.fr/" target="_blank" rel="noopener">
-    <img src="/assets/mockup/Maison-Haurut.png"
-         class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded" />
-  </a>
-
-  <!-- Les Noces d'Anaïs -->
-  <a href="https://lesnocesdanais.fr" target="_blank" rel="noopener">
-    <img src="/assets/mockup/les-noces-anais.png"
-         class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded" />
-  </a>
-
-  <!-- Pas de lien pour ces deux-là, si besoin vous pouvez en ajouter de la même manière -->
-  <img src="/assets/mockup/la-petite-capitale.png"
-       class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded" />
-  <img src="/assets/mockup/bordeauxsportsactu.png"
-       class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded" />
-</div>
-
-    </div>
-  </section>
-  <div class="custom-cursor uppercase">voir le site</div>
-</div>
-  <section class="px-8 py-12 border-b vc_section">
-  <!-- Titre -->
-  <h2 class="text-lg font-semibold uppercase vc_text-black tracking-wide mb-2">EXPÉRIENCES :</h2>
-  <div class="w-12 h-[2px] bg-black mb-10"></div>
-
-  <!-- Deux colonnes -->
-  <div class="flex flex-wrap md:flex-nowrap w-full gap-12 ">
-    
-    <!-- Colonne gauche (logos + infos) -->
-    <div class="w-full md:w-1/2 space-y-16">
-      <!-- Expérience TargetWeb -->
-      <div class="space-y-2">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMFkb5_33X24w4o2u1QRTANsOheRqBPRf3YA&s" alt="Logo TargetWeb" class="w-auto h-[60px] object-contain">
-        <p class="vc_text-black text-sm">Développeur full-stack – 2023 - Maintenant<br>Alternance – Ynov Campus</p>
-      </div>
-
-      <!-- Expérience Cybertek -->
-      <div class="space-y-2">
-        <img src="https://assets.leparisien.fr/website/images/promo-codes/brand-logo/cybertek.png" alt="Logo Cybertek" class="w-auto h-[60px] object-contain">
-        <p class="vc_text-black text-sm">Webmaster – 2022 - 2023<br>Alternance – IUT Bordeaux Bastide</p>
-      </div>
-    </div>
-
-    <!-- Colonne droite (missions) -->
-    <div class="w-full md:w-1/2 text-sm vc_text-black space-y-8">
-      <ul class="list-inside space-y-1">
-        <li>WordPress</li>
-        <li>Site Ecommerce / Vitrine</li>
-        <li>WooCommerce</li>
-        <li>Divi / Elementor</li>
-        <li>Thème personnalisé</li>
-        <li>Création de plugin sur demande (Plugin de FAQ dynamique…)</li>
-        <li>Utilisation de PHP, SQL, HTML, CSS, JS, jQuery, Tailwind…</li>
-        <li>Déploiement de projet</li>
-        <li>Infogérance / Maintenance (parc de +150 sites)</li>
-        <li>SEO technique</li>
-        <li>Gestion sécurité</li>
-      </ul>
-
-      <ul class="list-inside space-y-1">
-        <li>Création d’outil de rédaction automatique de fiche produit via IA</li>
-        <li>Gestion de commandes E-commerce</li>
-        <li>Vérification faisabilité commandes e-commerce</li>
-        <li>Création d’outil pour la gestion SEO en python</li>
-        <li>Refonte mise en page fiche technique “pc gaming”</li>
-        <li>Gestion catalogue produit</li>
-        <li>Veille concurrentielle</li>
-        <li>Réflexion technique e-commerce</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-<section class="px-8 py-12 border-b vc_section">
-  <h2 class="text-lg font-semibold uppercase vc_text-black tracking-wide mb-2">PROJETS PERSONNELS :</h2>
-  <div class="w-12 h-[2px] bg-black mb-10"></div>
-
-  <div class="flex flex-wrap justify-between gap-4">
-    <!-- Projet -->
-    <div class="group w-[170px] text-center cursor-pointer transition-all duration-300 ease-in-out ">
-      <h3 class="vc_text-black text-sm font-medium mb-1 underline">Mega Compressor</h3>
-      <div class="mx-auto w-px h-6 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-line></div>
-      <div class="max-h-0 opacity-0 group-hover:max-h-[500px] group-hover:opacity-100 transition-all duration-300 ease-in-out mt-4 w-[200px] bg-black text-white text-xs p-4 rounded shadow-lg mx-auto" data-project>
-        <p class="mb-2">Langage : Python</p>
-        <p class="mb-2">Script permettant de réduire le poids des images en les compressant en WebP.</p>
-        <a href="#" target="_blank">
-          <img src="https://img.icons8.com/m_outlined/512/FFFFFF/github.png" alt="GitHub" class="w-5 h-5 mx-auto mt-2" />
-        </a>
-      </div>
-    </div>
-
-    <!-- TableGenerator -->
-    <div class="group w-[170px] text-center cursor-pointer transition-all duration-300 ease-in-out ">
-      <h3 class="vc_text-black text-sm font-medium mb-1 underline">TableGenerator</h3>
-      <div class="mx-auto w-px h-6 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-line></div>
-      <div class="max-h-0 opacity-0 group-hover:max-h-[500px] group-hover:opacity-100 transition-all duration-300 ease-in-out mt-4 w-[200px] bg-black text-white text-xs p-4 rounded shadow-lg mx-auto" data-project>
-        <p class="mb-2">Langage : HTML, CSS</p>
-        <p class="mb-2">Outil permettant de générer des tableaux HTML avec indicateurs visuels.</p>
-        <a href="#" target="_blank">
-          <img src="https://img.icons8.com/m_outlined/512/FFFFFF/github.png" alt="GitHub" class="w-5 h-5 mx-auto mt-2" />
-        </a>
-      </div>
-    </div>
-
-    <!-- Plugin FAQ -->
-    <div class="group w-[170px] text-center cursor-pointer transition-all duration-300 ease-in-out ">
-      <h3 class="vc_text-black text-sm font-medium mb-1 underline">Plugin FAQ</h3>
-      <div class="mx-auto w-px h-6 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-line></div>
-      <div class="max-h-0 opacity-0 group-hover:max-h-[500px] group-hover:opacity-100 transition-all duration-300 ease-in-out mt-4 w-[200px] bg-black text-white text-xs p-4 rounded shadow-lg mx-auto" data-project>
-        <p class="mb-2">Langage : PHP, JS, Ajax</p>
-        <p class="mb-2">Plugin WordPress intelligent de gestion de FAQ dynamique et filtrable.</p>
-        <a href="#" target="_blank">
-          <img src="https://img.icons8.com/m_outlined/512/FFFFFF/github.png" alt="GitHub" class="w-5 h-5 mx-auto mt-2" />
-        </a>
-      </div>
-    </div>
-
-    <!-- Squad Generator -->
-    <div class="group w-[170px] text-center cursor-pointer transition-all duration-300 ease-in-out ">
-      <h3 class="vc_text-black text-sm font-medium mb-1 underline">Squad Generator</h3>
-      <div class="mx-auto w-px h-6 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-line></div>
-      <div class="max-h-0 opacity-0 group-hover:max-h-[500px] group-hover:opacity-100 transition-all duration-300 ease-in-out mt-4 w-[200px] bg-black text-white text-xs p-4 rounded shadow-lg mx-auto" data-project>
-        <p class="mb-2">Langage : Python, JS</p>
-        <p class="mb-2">Génère aléatoirement des équipes à partir d’une liste de participants.</p>
-        <a href="#" target="_blank">
-          <img src="https://img.icons8.com/m_outlined/512/FFFFFF/github.png" alt="GitHub" class="w-5 h-5 mx-auto mt-2" />
-        </a>
-      </div>
-    </div>
-
-    <!-- IA Auto Fiche -->
-    <div class="group w-[170px] text-center cursor-pointer transition-all duration-300 ease-in-out ">
-      <h3 class="vc_text-black text-sm font-medium mb-1 underline">Fiche IA (OpenAI)</h3>
-      <div class="mx-auto w-px h-6 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-line></div>
-      <div class="max-h-0 opacity-0 group-hover:max-h-[500px] group-hover:opacity-100 transition-all duration-300 ease-in-out mt-4 w-[200px] bg-black text-white text-xs p-4 rounded shadow-lg mx-auto" data-project>
-        <p class="mb-2">Langage : Python, API OpenAI</p>
-        <p class="mb-2">Automatisation de fiches produit via fichier XLSX + prompt dynamique.</p>
-        <a href="#" target="_blank">
-          <img src="https://img.icons8.com/m_outlined/512/FFFFFF/github.png" alt="GitHub" class="w-5 h-5 mx-auto mt-2" />
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="px-8 py-12 border-b vc_section">
-  <!-- Titre -->
-  <h2 class="text-lg font-semibold uppercase vc_text-black tracking-wide mb-2">Témoignages :</h2>
-  <div class="w-12 h-[2px] bg-black mb-10"></div>
-
-  <section class="avis-clients">
-  <div class="card">
-  <img src="/assets/images/logofooter-edgse.png" alt="Évènementiel du Grand Saint-Émilionnais" class="logo-client">
-  <p class="nom-client">Jeremie Turtaut</p>
-  <p class="avis">Vincent nous a créé notre site d’évènementiel. C’est une personne qui est à l’écoute de nos idées, et surtout il a su très bien nous conseiller. Le site est vraiment top. Je recommande cette personne les yeux fermés. Super boulot.</p>
-  <p class="stars">★★★★★</p>
-  <a href="https://structure-gonflable-33.fr/" class="btn-site" target="_blank" rel="noopener">Voir le site</a>
-</div>
-
-<div class="card">
-  <img src="/assets/images/les-noces-d-anais.png" alt="Les Noces d'anaïs" class="logo-client">
-  <p class="nom-client">Anaïs Braun</p>
-  <p class="avis">Je ne peux que vous recommander Vincent ! Professionnel, à l'écoute et de bon conseil, il a créé le site internet de mon blog mariage. Il m’a aidée à le prendre en main et à l’optimiser dans le temps. Je suis absolument ravie du résultat.</p>
-  <p class="stars">★★★★★</p>
-  <a href="https://lesnocesdanais.fr" class="btn-site" target="_blank" rel="noopener">Voir le site</a>
-</div>
-
-<div class="card">
-  <img src="/assets/images/arts-deco-design.png" alt="Arts Déco Design" class="logo-client">
-  <p class="nom-client">Loïs Oddo</p>
-  <p class="avis">Grâce à Vincent, je peux enfin mettre en avant des artistes sur internet. Il a créé mon blog Figma/WordPress de façon super efficace. Il est resté disponible et m’a proposé des solutions toujours pertinentes. Merci !</p>
-  <p class="stars">★★★★★</p>
-  <a href="https://artsdecodesign.fr" class="btn-site" target="_blank" rel="noopener">Voir le site</a>
-</div>
-
-<div class="card">
-  <img src="/assets/images/maison-haurut.png" alt="Maison Haurut" class="logo-client">
-  <p class="nom-client">Allan Haurut</p>
-  <p class="avis">Vincent a créé le site vitrine de ma boucherie artisanale. Navigation fluide, bon conseil pour le SEO, super adaptation. Très pro et clair dans ses explications. Merci Vincent !</p>
-  <p class="stars">★★★★★</p>
-  <a href="https://maisonhaurut.fr/" class="btn-site" target="_blank" rel="noopener">Voir le site</a>
-</div>
-
-</section>
-</section>
-
-<section class="px-8 py-12  vc_section">
-<section class="bg-black text-white rounded-[50px]">
-  <div class="flex flex-col px-8 py-12 md:flex-row justify-between gap-10 ">
-    <!-- Formulaire -->
-    <div class="flex-1">
-      <h2 class="text-4xl md:text-8xl font-bold mb-8">ME CONTACTER</h2>
-      <form class="space-y-6 max-w-xl my-12">
-        <div>
-          <input placeholder="Votre email" type="email" id="email" class="text-sm  w-full bg-transparent border-b border-white focus:outline-none vc_placeholder::text-white" />
+    </section>
+    <section class="px-8 py-12 border-b vc_section">
+      <h2
+        class="text-lg font-semibold uppercase vc_text-black tracking-wide mb-2"
+      >
+        PROJETS PERSONNELS :
+      </h2>
+      <div class="w-12 h-[2px] bg-black mb-10"></div>
+      <div class="flex flex-wrap justify-between gap-4">
+        <!-- Projet -->
+        <div
+          class="group w-[170px] text-center cursor-pointer transition-all duration-300 ease-in-out"
+        >
+          <h3 class="vc_text-black text-sm font-medium mb-1 underline">
+            Mega Compressor
+          </h3>
+          <div
+            class="mx-auto w-px h-6 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            data-line=""
+          ></div>
+          <div
+            class="max-h-0 opacity-0 group-hover:max-h-[500px] group-hover:opacity-100 transition-all duration-300 ease-in-out mt-4 w-[200px] bg-black text-white text-xs p-4 rounded shadow-lg mx-auto"
+            data-project=""
+          >
+            <p class="mb-2">Langage : Python</p>
+            <p class="mb-2">
+              Script permettant de réduire le poids des images en les
+              compressant en WebP.
+            </p>
+            <a href="#" target="_blank">
+              <img
+                alt="GitHub"
+                class="w-5 h-5 mx-auto mt-2"
+                loading="lazy"
+                src="/assets/logos/github.webp"
+            /></a>
+          </div>
         </div>
-        <div>
-          <textarea placeholder="Votre message" id="message" rows="4" class="text-sm  w-full bg-transparent border-b border-white focus:outline-none vc_placeholder::text-white" placeholder=" "></textarea>
+        <!-- TableGenerator -->
+        <div
+          class="group w-[170px] text-center cursor-pointer transition-all duration-300 ease-in-out"
+        >
+          <h3 class="vc_text-black text-sm font-medium mb-1 underline">
+            TableGenerator
+          </h3>
+          <div
+            class="mx-auto w-px h-6 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            data-line=""
+          ></div>
+          <div
+            class="max-h-0 opacity-0 group-hover:max-h-[500px] group-hover:opacity-100 transition-all duration-300 ease-in-out mt-4 w-[200px] bg-black text-white text-xs p-4 rounded shadow-lg mx-auto"
+            data-project=""
+          >
+            <p class="mb-2">Langage : HTML, CSS</p>
+            <p class="mb-2">
+              Outil permettant de générer des tableaux HTML avec indicateurs
+              visuels.
+            </p>
+            <a href="#" target="_blank">
+              <img
+                alt="GitHub"
+                class="w-5 h-5 mx-auto mt-2"
+                loading="lazy"
+                src="/assets/logos/github.webp"
+            /></a>
+          </div>
         </div>
-        <button type="submit" class="border border-white px-6 py-2 uppercase hover:bg-white hover:text-black transition">Envoyer</button>
-      </form>
-    </div>
-
-    <!-- Navigation droite -->
-    <div class="items-end justify-between text-right flex flex-col">
-      <nav class="space-y-2 text-sm uppercase flex flex-col nav-footer">
-        <a href="#about" class="nav-link">À propos</a>
-        <a href="#realisations" class="nav-link">Réalisations</a>
-        <a href="#experiences" class="nav-link">Expériences</a>
-        <a href="#projet" class="nav-link">Projet</a>
-        <a href="#personnel" class="nav-link">Personnel</a>
-        <a href="#temoignage" class="nav-link">Témoignage</a>
-      </nav>
-
-      <!-- Réseaux sociaux -->
-      <div class="flex gap-4 mt-10">
-        <a href="#" aria-label="Instagram" class="hover:opacity-80">
-          <i class="fab fa-instagram text-xl"></i>
-        </a>
-        <a href="#" aria-label="GitHub" class="hover:opacity-80">
-          <i class="fab fa-github text-xl"></i>
-        </a>
-        <a href="#" aria-label="LinkedIn" class="hover:opacity-80">
-          <i class="fab fa-linkedin text-xl"></i>
-        </a>
+        <!-- Plugin FAQ -->
+        <div
+          class="group w-[170px] text-center cursor-pointer transition-all duration-300 ease-in-out"
+        >
+          <h3 class="vc_text-black text-sm font-medium mb-1 underline">
+            Plugin FAQ
+          </h3>
+          <div
+            class="mx-auto w-px h-6 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            data-line=""
+          ></div>
+          <div
+            class="max-h-0 opacity-0 group-hover:max-h-[500px] group-hover:opacity-100 transition-all duration-300 ease-in-out mt-4 w-[200px] bg-black text-white text-xs p-4 rounded shadow-lg mx-auto"
+            data-project=""
+          >
+            <p class="mb-2">Langage : PHP, JS, Ajax</p>
+            <p class="mb-2">
+              Plugin WordPress intelligent de gestion de FAQ dynamique et
+              filtrable.
+            </p>
+            <a href="#" target="_blank">
+              <img
+                alt="GitHub"
+                class="w-5 h-5 mx-auto mt-2"
+                loading="lazy"
+                src="/assets/logos/github.webp"
+              />
+            </a>
+          </div>
+        </div>
+        <!-- Squad Generator -->
+        <div
+          class="group w-[170px] text-center cursor-pointer transition-all duration-300 ease-in-out"
+        >
+          <h3 class="vc_text-black text-sm font-medium mb-1 underline">
+            Squad Generator
+          </h3>
+          <div
+            class="mx-auto w-px h-6 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            data-line=""
+          ></div>
+          <div
+            class="max-h-0 opacity-0 group-hover:max-h-[500px] group-hover:opacity-100 transition-all duration-300 ease-in-out mt-4 w-[200px] bg-black text-white text-xs p-4 rounded shadow-lg mx-auto"
+            data-project=""
+          >
+            <p class="mb-2">Langage : Python, JS</p>
+            <p class="mb-2">
+              Génère aléatoirement des équipes à partir d’une liste de
+              participants.
+            </p>
+            <a href="#" target="_blank">
+              <img
+                alt="GitHub"
+                class="w-5 h-5 mx-auto mt-2"
+                loading="lazy"
+                src="/assets/logos/github.webp"
+              />
+            </a>
+          </div>
+        </div>
+        <!-- IA Auto Fiche -->
+        <div
+          class="group w-[170px] text-center cursor-pointer transition-all duration-300 ease-in-out"
+        >
+          <h3 class="vc_text-black text-sm font-medium mb-1 underline">
+            Fiche IA (OpenAI)
+          </h3>
+          <div
+            class="mx-auto w-px h-6 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            data-line=""
+          ></div>
+          <div
+            class="max-h-0 opacity-0 group-hover:max-h-[500px] group-hover:opacity-100 transition-all duration-300 ease-in-out mt-4 w-[200px] bg-black text-white text-xs p-4 rounded shadow-lg mx-auto"
+            data-project=""
+          >
+            <p class="mb-2">Langage : Python, API OpenAI</p>
+            <p class="mb-2">
+              Automatisation de fiches produit via fichier XLSX + prompt
+              dynamique.
+            </p>
+            <a href="#" target="_blank">
+              <img
+                alt="GitHub"
+                class="w-5 h-5 mx-auto mt-2"
+                loading="lazy"
+                src="/assets/logos/github.webp"
+              />
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-    
-  </div>
-
-  <div class="mx-12 pb-12 border-t border-white pt-4 text-sm text-center md:text-left">
-    2025 – Vincent-Antoine Comparato. Tous droits réservés. SIRET : 898 019 351 00019
-  </div>
-</section>
-
-
-</body>
-
+    </section>
+    <section class="px-8 py-12 border-b vc_section">
+      <!-- Titre -->
+      <h2
+        class="text-lg font-semibold uppercase vc_text-black tracking-wide mb-2"
+      >
+        Témoignages :
+      </h2>
+      <div class="w-12 h-[2px] bg-black mb-10"></div>
+      <section class="avis-clients">
+        <div class="card">
+          <img
+            alt="Évènementiel du Grand Saint-Émilionnais"
+            class="logo-client"
+            loading="lazy"
+            src="/assets/images/logofooter-edgse.webp"
+          />
+          <p class="nom-client">Jeremie Turtaut</p>
+          <p class="avis">
+            Vincent nous a créé notre site d’évènementiel. C’est une personne
+            qui est à l’écoute de nos idées, et surtout il a su très bien nous
+            conseiller. Le site est vraiment top. Je recommande cette personne
+            les yeux fermés. Super boulot.
+          </p>
+          <p class="stars">★★★★★</p>
+          <a
+            class="btn-site"
+            href="https://structure-gonflable-33.fr/"
+            rel="noopener"
+            target="_blank"
+            >Voir le site</a
+          >
+        </div>
+        <div class="card">
+          <img
+            alt="Les Noces d'anaïs"
+            class="logo-client"
+            loading="lazy"
+            src="/assets/images/les-noces-d-anais.webp"
+          />
+          <p class="nom-client">Anaïs Braun</p>
+          <p class="avis">
+            Je ne peux que vous recommander Vincent ! Professionnel, à l'écoute
+            et de bon conseil, il a créé le site internet de mon blog mariage.
+            Il m’a aidée à le prendre en main et à l’optimiser dans le temps. Je
+            suis absolument ravie du résultat.
+          </p>
+          <p class="stars">★★★★★</p>
+          <a
+            class="btn-site"
+            href="https://lesnocesdanais.fr"
+            rel="noopener"
+            target="_blank"
+            >Voir le site</a
+          >
+        </div>
+        <div class="card">
+          <img
+            alt="Arts Déco Design"
+            class="logo-client"
+            loading="lazy"
+            src="/assets/images/arts-deco-design.webp"
+          />
+          <p class="nom-client">Loïs Oddo</p>
+          <p class="avis">
+            Grâce à Vincent, je peux enfin mettre en avant des artistes sur
+            internet. Il a créé mon blog Figma/WordPress de façon super
+            efficace. Il est resté disponible et m’a proposé des solutions
+            toujours pertinentes. Merci !
+          </p>
+          <p class="stars">★★★★★</p>
+          <a
+            class="btn-site"
+            href="https://artsdecodesign.fr"
+            rel="noopener"
+            target="_blank"
+            >Voir le site</a
+          >
+        </div>
+        <div class="card">
+          <img
+            alt="Maison Haurut"
+            class="logo-client"
+            loading="lazy"
+            src="/assets/images/maison-haurut.webp"
+          />
+          <p class="nom-client">Allan Haurut</p>
+          <p class="avis">
+            Vincent a créé le site vitrine de ma boucherie artisanale.
+            Navigation fluide, bon conseil pour le SEO, super adaptation. Très
+            pro et clair dans ses explications. Merci Vincent !
+          </p>
+          <p class="stars">★★★★★</p>
+          <a
+            class="btn-site"
+            href="https://maisonhaurut.fr/"
+            rel="noopener"
+            target="_blank"
+            >Voir le site</a
+          >
+        </div>
+      </section>
+    </section>
+    <section class="px-8 py-12 vc_section">
+      <section class="bg-black text-white rounded-[50px]">
+        <div
+          class="flex flex-col px-8 py-12 md:flex-row justify-between gap-10"
+        >
+          <!-- Formulaire -->
+          <div class="flex-1">
+            <h2 class="text-4xl md:text-8xl font-bold mb-8">ME CONTACTER</h2>
+            <form class="space-y-6 max-w-xl my-12">
+              <div>
+                <input
+                  class="text-sm w-full bg-transparent border-b border-white focus:outline-none vc_placeholder::text-white"
+                  id="email"
+                  placeholder="Votre email"
+                  type="email"
+                />
+              </div>
+              <div>
+                <textarea
+                  class="text-sm w-full bg-transparent border-b border-white focus:outline-none vc_placeholder::text-white"
+                  id="message"
+                  placeholder=" "
+                  rows="4"
+                ></textarea>
+              </div>
+              <button
+                class="border border-white px-6 py-2 uppercase hover:bg-white hover:text-black transition"
+                type="submit"
+              >
+                Envoyer
+              </button>
+            </form>
+          </div>
+          <!-- Navigation droite -->
+          <div class="items-end justify-between text-right flex flex-col">
+            <nav class="space-y-2 text-sm uppercase flex flex-col nav-footer">
+              <a class="nav-link" href="#about">À propos</a>
+              <a class="nav-link" href="#realisations">Réalisations</a>
+              <a class="nav-link" href="#experiences">Expériences</a>
+              <a class="nav-link" href="#projet">Projet</a>
+              <a class="nav-link" href="#personnel">Personnel</a>
+              <a class="nav-link" href="#temoignage">Témoignage</a>
+            </nav>
+            <!-- Réseaux sociaux -->
+            <div class="flex gap-4 mt-10">
+              <a aria-label="Instagram" class="hover:opacity-80" href="#">
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a aria-label="GitHub" class="hover:opacity-80" href="#">
+                <i class="fab fa-github text-xl"></i>
+              </a>
+              <a aria-label="LinkedIn" class="hover:opacity-80" href="#">
+                <i class="fab fa-linkedin text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mx-12 pb-12 border-t border-white pt-4 text-sm text-center md:text-left"
+        >
+          2025 – Vincent-Antoine Comparato. Tous droits réservés. SIRET : 898
+          019 351 00019
+        </div>
+      </section>
+    </section>
+  </body>
 </html>
