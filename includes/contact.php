@@ -1,0 +1,84 @@
+<section class="px-8 py-12 vc_section" id="contact">
+      <section class="bg-black text-white rounded-[50px]">
+        <div
+          class="flex flex-col px-8 py-12 md:flex-row justify-between gap-10"
+        >
+          <!-- Formulaire -->
+          <div class="flex-1">
+            <h2 class="text-4xl md:text-8xl font-bold mb-8">ME CONTACTER</h2>
+            <form
+              class="space-y-6 max-w-xl my-12"
+              action="send-mail.php"
+              method="POST"
+            >
+              <div>
+                <input
+                  class="text-sm w-full bg-transparent border-b border-white focus:outline-none vc_placeholder::text-white"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Votre email"
+                  type="email"
+                />
+              </div>
+              <div>
+                <textarea
+                  class="text-sm w-full bg-transparent border-b border-white focus:outline-none vc_placeholder::text-white"
+                  id="message"
+                  name="message"
+                  required
+                  placeholder="Votre message"
+                  rows="4"
+                ></textarea>
+              </div>
+              <button
+                class="border border-white px-6 py-2 uppercase hover:bg-white hover:text-black transition"
+                type="submit"
+              >
+                Envoyer
+              </button>
+            </form>
+          </div>
+          <!-- Navigation droite -->
+          <div class="items-end justify-between text-right flex flex-col">
+            <nav class="space-y-2 text-sm uppercase flex flex-col nav-footer">
+              <a class="nav-link" href="#about">À propos</a>
+              <a class="nav-link" href="#realisations">Réalisations</a>
+              <a class="nav-link" href="#experiences">Expériences</a>
+              <a class="nav-link" href="#projets">Projets</a>
+              <a class="nav-link" href="#temoignages">Témoignages</a>
+            </nav>
+            <!-- Réseaux sociaux -->
+            <div class="flex gap-4 mt-10">
+              <a
+                aria-label="Instagram"
+                class="hover:opacity-80"
+                href="https://www.instagram.com/vincent.cm/"
+              >
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a
+                aria-label="GitHub"
+                class="hover:opacity-80"
+                href="https://github.com/Vincent-Antoine"
+              >
+                <i class="fab fa-github text-xl"></i>
+              </a>
+              <a
+                aria-label="LinkedIn"
+                class="hover:opacity-80"
+                href="https://www.linkedin.com/in/vincent-comparato/"
+              >
+                <i class="fab fa-linkedin text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mx-12 pb-12 border-t border-white pt-4 text-sm text-center md:text-left"
+        >
+          2025 – Vincent-Antoine Comparato. Tous droits réservés. SIRET : 898
+          019 351 00019
+        </div>
+      </section>
+    </section>
