@@ -20,6 +20,12 @@ if (preg_match("/[\r\n]/", $email)) {
     exit("Tentative d'injection détectée.");
 }
 
+// Vérification de l'acceptation RGPD
+if (empty($_POST['rgpd'])) {
+    http_response_code(400);
+    exit("Vous devez accepter l'utilisation de vos données pour envoyer le message.");
+}
+
 // Destinataire
 $to = "contact@vincentcomparato.fr";
 

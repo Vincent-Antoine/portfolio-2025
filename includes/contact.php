@@ -33,6 +33,15 @@
                   rows="4"
                 ></textarea>
               </div>
+              <div>
+  <label class="text-sm flex items-start gap-2">
+    <input type="checkbox" name="rgpd" required class="mt-1" />
+    <span>
+      J’accepte que mes données soient utilisées uniquement pour être contacté. Aucune donnée n’est conservée après traitement.
+    </span>
+  </label>
+</div>
+
               <button
                 class="border border-white px-6 py-2 uppercase hover:bg-white hover:text-black transition"
                 type="submit"
