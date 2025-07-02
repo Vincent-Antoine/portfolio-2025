@@ -5,7 +5,7 @@
         >
           <!-- Formulaire -->
           <div class="flex-1">
-            <h2 class="text-4xl md:text-8xl font-bold mb-8">ME CONTACTER</h2>
+<h2 class="text-2xl md:text-8xl font-bold mb-8">ME CONTACTER</h2>
             <form
               class="space-y-6 max-w-xl my-12"
               action="send-mail.php"
@@ -40,7 +40,7 @@
             </form>
           </div>
           <!-- Navigation droite -->
-          <div class="items-end justify-between text-right flex flex-col">
+        <div class="flex flex-row md:flex-col items-end justify-between text-right flex-wrap">
             <nav class="space-y-2 text-sm uppercase flex flex-col nav-footer">
               <a class="nav-link" href="#about">À propos</a>
               <a class="nav-link" href="#realisations">Réalisations</a>

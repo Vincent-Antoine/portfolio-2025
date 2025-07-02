@@ -115,7 +115,7 @@ gsap.utils.toArray(".vc_section").forEach(section => {
 
   ScrollTrigger.create({
     trigger: section,
-    start: "top 80%",
+    start: "top 85%",
     end: "bottom 20%",
     onEnter: () => {
       gsap.to(section, { x: 0, opacity: 1, duration: 1, ease: "power2.out" });
@@ -148,3 +148,5 @@ gsap.from(split.chars, {
     grid: 'auto',
   }
 });
+
+

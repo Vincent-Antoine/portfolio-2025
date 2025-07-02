@@ -1,4 +1,4 @@
-<h1 class="vc_principal-texte uppercase">Developpeur web</h1>
+<h1 class="vc_principal-texte uppercase text-[2rem] sm:text-[5rem] lg:text-[8rem]">Developpeur web</h1>
     <div
       class="flex flex-wrap md:flex-nowrap w-full px-8 py-12 vc_section"
       id="about"

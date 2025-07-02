@@ -20,7 +20,7 @@
           >
             <img
               alt="Arts Déco Design"
-              class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded"
+              class="w-[200px] h-[100px] md:w-[600px] md:h-[250px] object-cover flex-shrink-0 rounded"
               loading="lazy"
               src="/assets/mockup/artsdecodesign.webp"
             />
@@ -34,7 +34,7 @@
           >
             <img
               alt="Structure Gonflable 33"
-              class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded"
+              class="w-[200px] h-[100px] md:w-[600px] md:h-[250px] object-cover flex-shrink-0 rounded"
               loading="lazy"
               src="/assets/mockup/Structure-Gonflable-33.webp"
             />
@@ -48,7 +48,7 @@
           >
             <img
               alt="Maison Haurut"
-              class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded"
+              class="w-[200px] h-[100px] md:w-[600px] md:h-[250px] object-cover flex-shrink-0 rounded"
               loading="lazy"
               src="/assets/mockup/Maison-Haurut.webp"
             />
@@ -62,7 +62,7 @@
           >
             <img
               alt="Les Noces d'Anaïs"
-              class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded"
+              class="w-[200px] h-[100px] md:w-[600px] md:h-[250px] object-cover flex-shrink-0 rounded"
               loading="lazy"
               src="/assets/mockup/les-noces-anais.webp"
             />
@@ -70,7 +70,7 @@
           <!-- Pas de lien pour ces deux-là, si besoin vous pouvez en ajouter de la même manière -->
           <img
             alt="La Petite Capitale"
-            class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded"
+            class="w-[200px] h-[100px] md:w-[600px] md:h-[250px] object-cover flex-shrink-0 rounded"
             loading="lazy"
             src="/assets/mockup/la-petite-capitale.webp"
           />
@@ -82,7 +82,7 @@
           >
             <img
               alt="Bordeaux Sports Actu"
-              class="w-[600px] h-[250px] object-cover flex-shrink-0 rounded"
+              class="w-[200px] h-[100px] md:w-[600px] md:h-[250px] object-cover flex-shrink-0 rounded"
               loading="lazy"
               src="/assets/mockup/bordeauxsportsactu.webp"
             />
