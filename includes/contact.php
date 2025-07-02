@@ -5,7 +5,7 @@
         >
           <!-- Formulaire -->
           <div class="flex-1">
-<h2 class="text-2xl md:text-8xl font-bold mb-8">ME CONTACTER test</h2>
+<h2 class="text-2xl md:text-8xl font-bold mb-8">ME CONTACTER</h2>
             <form
               class="space-y-6 max-w-xl my-12"
               action="send-mail.php"
